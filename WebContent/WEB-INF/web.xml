@@ -5,10 +5,10 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
 
 
-	<description>Oracle Test App</description>
+	<description>MySQL Test App</description>
   	<resource-ref>
       <description>DB Connection</description>
-      <res-ref-name>oracle/scott</res-ref-name>
+      <res-ref-name>mysql/ssar</res-ref-name>
       <res-type>javax.sql.DataSource</res-type>
       <res-auth>Container</res-auth>
   	</resource-ref>

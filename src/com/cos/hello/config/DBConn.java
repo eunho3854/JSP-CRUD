@@ -11,7 +11,7 @@ public class DBConn {
 		try {
 			Context initContext = new InitialContext();
 			Context envContext  = (Context)initContext.lookup("java:/comp/env");
-			DataSource ds = (DataSource)envContext.lookup("oracle/scott");
+			DataSource ds = (DataSource)envContext.lookup("mysql/ssar");
 			Connection conn = ds.getConnection();
 			return conn;
 		} catch (Exception e) {

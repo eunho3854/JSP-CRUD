@@ -1,18 +1,18 @@
-package com.cos.hello.controller;
+package com.cos.hello.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@Data
 
-public class Users {
+public class Board {
 	private int id;
-	private String username;
-	private String password;
-	private String email;
+	private String title;
+	private String content;
+	private int userId; // fk
 }

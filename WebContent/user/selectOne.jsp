@@ -1,4 +1,4 @@
-<%@page import="com.cos.hello.controller.Users"%>
+<%@page import="com.cos.hello.model.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
