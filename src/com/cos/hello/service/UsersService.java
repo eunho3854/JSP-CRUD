@@ -37,6 +37,8 @@ public class UsersService {
 	
 	public void 로그인(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
+		resp.setContentType("text/html;charset=utf-8");
+
 		// 1번 값 전달 받기
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");

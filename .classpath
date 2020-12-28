@@ -16,5 +16,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/lombok.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.22.jar"/>
+	<classpathentry kind="lib" path="lib/cos.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
