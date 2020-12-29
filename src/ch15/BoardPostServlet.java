@@ -12,8 +12,7 @@ public class BoardPostServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		System.out.println("뻐킹");
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("EUC-KR");
 		BoardMgr bMgr = new BoardMgr();
 		bMgr.insertBoard(request);
 		response.sendRedirect("list.jsp");

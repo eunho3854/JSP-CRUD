@@ -9,7 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.cos.hello.config.AttackFilter;
 import com.cos.hello.dao.UsersDao;
+import com.cos.hello.dto.JoinDto;
+import com.cos.hello.dto.LoginDto;
 import com.cos.hello.model.Users;
 import com.cos.hello.util.Script;
 
@@ -17,15 +20,11 @@ public class UsersService {
 
 	
 	public void 회원가입(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		String username = req.getParameter("username");
-		String password = req.getParameter("password");
-		String email = req.getParameter("email");
-
-		Users user = Users.builder().username(username).password(password).email(email).build();
+		JoinDto loginDto = (JoinDto) req.getAttribute("dto");
 
 		UsersDao usersDao = new UsersDao(); // 싱글턴 패턴으로 바꾸기
-		int result = usersDao.insert(user);
-
+		int result = usersDao.insert(loginDto);
+		
 		if (result == 1) {
 			// 3번 INSERT가 정상적으로 되었다면 login.jsp를 응답 !
 			resp.sendRedirect("auth/login.jsp");
@@ -37,17 +36,10 @@ public class UsersService {
 	
 	public void 로그인(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-		resp.setContentType("text/html;charset=utf-8");
+		LoginDto loginDto = (LoginDto) req.getAttribute("dto");
 
-		// 1번 값 전달 받기
-		String username = req.getParameter("username");
-		String password = req.getParameter("password");
-
-		// 2번 데이터베이스 값이 있는 select해서 확인
-		// 생략
-		Users user = Users.builder().username(username).password(password).build();
 		UsersDao usersDao = new UsersDao();
-		Users userEntity = usersDao.login(user);
+		Users userEntity = usersDao.login(loginDto);
 
 		if (userEntity != null) {
 			HttpSession session = req.getSession();

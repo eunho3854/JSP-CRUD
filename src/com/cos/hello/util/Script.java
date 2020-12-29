@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Script {
 	
 	public static void back(HttpServletResponse resp, String msg) throws IOException {
+
 		PrintWriter out = resp.getWriter();
 		out.println("<script>");
 		out.println("alert('"+ msg +"');");
@@ -17,6 +18,9 @@ public class Script {
 	}
 	
 	public static void href(HttpServletResponse resp, String url, String msg) throws IOException {
+//		resp.setContentType("text/html;charset=utf-8");
+		// resp.setHeader("Context-Type", "text/html; charset=UTF-8"); 위의 코드랑 같은 거임
+		
 		PrintWriter out = resp.getWriter();
 		out.println("<script>");
 		out.println("alert('"+ msg +"');");

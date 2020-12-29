@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page contentType="text/html; charset=EUC-KR" %>
 <html>
 <head>
 <title>JSP Board</title>
@@ -9,7 +9,7 @@
 <br/><br/>
 <table width="600" cellpadding="3">
 	<tr>
-		<td bgcolor="84F399" height="25" align="center">ê¸€ì“°ê¸°</td>
+		<td bgcolor="84F399" height="25" align="center">±Û¾²±â</td>
 	</tr>
 </table>
 <br/>
@@ -19,30 +19,30 @@
 		<td align=center>
 		<table align="center">
 			<tr>
-				<td width="10%">ì„± ëª…</td>
+				<td width="10%">¼º ¸í</td>
 				<td width="90%">
 				<input name="name" size="10" maxlength="8"></td>
 			</tr>
 			<tr>
-				<td>ì œ ëª©</td>
+				<td>Á¦ ¸ñ</td>
 				<td>
 				<input name="subject" size="50" maxlength="30"></td>
 			</tr>
 			<tr>
-				<td>ë‚´ ìš©</td>
+				<td>³» ¿ë</td>
 				<td><textarea name="content" rows="10" cols="50"></textarea></td>
 			</tr>
 			<tr>
-				<td>ë¹„ë°€ ë²ˆí˜¸</td>
+				<td>ºñ¹Ð ¹øÈ£</td>
 				<td><input type="password" name="pass" size="15" maxlength="15"></td>
 			</tr>
 			<tr>
 			 <tr>
-     			<td>íŒŒì¼ì°¾ê¸°</td> 
+     			<td>ÆÄÀÏÃ£±â</td> 
      			<td><input type="file" name="filename" size="50" maxlength="50"></td>
     		</tr>
  			<tr>
- 				<td>ë‚´ìš©íƒ€ìž…</td>
+ 				<td>³»¿ëÅ¸ÀÔ</td>
  				<td> HTML<input type=radio name="contentType" value="HTTP" >&nbsp;&nbsp;&nbsp;
   			 	TEXT<input type=radio name="contentType" value="TEXT" checked>
   			 	</td>
@@ -52,9 +52,9 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					 <input type="submit" value="ë“±ë¡">
-					 <input type="reset" value="ë‹¤ì‹œì“°ê¸°">
-					 <input type="button" value="ë¦¬ìŠ¤íŠ¸" onClick="javascript:location.href='list.jsp'">
+					 <input type="submit" value="µî·Ï">
+					 <input type="reset" value="´Ù½Ã¾²±â">
+					 <input type="button" value="¸®½ºÆ®" onClick="javascript:location.href='list.jsp'">
 				</td>
 			</tr>
 		</table>
